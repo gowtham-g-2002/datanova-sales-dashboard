@@ -57,14 +57,8 @@ Two tables joined on PRODUCT ID (many-to-one, InputData → MasterData).
 | SELLING PRICE | List price per unit |
 
 Business logic: Sales = Quantity × Selling Price × (1 − Discount %) and
-Profit = Sales − Quantity × Buying Price. See [docs/dax_measures.md](docs/dax_measures.md).
+Profit = Sales − Quantity × Buying Price. 
 
-## How to use
-
-Clone the repo: git clone https://github.com/<your-username>/powerbi-sales-dashboard.git
-Open dashboard/Sales_Dashboard.pbix in Power BI Desktop
-If prompted, point the data source to data/Sales_Dashboard_Data.xlsx
-(Home → Transform data → Data source settings)
 ## Tools
 
 Power BI Desktop · DAX · Power Query · Excel
