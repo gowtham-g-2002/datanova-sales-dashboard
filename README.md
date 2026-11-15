@@ -69,7 +69,12 @@ If prompted, point the data source to data/Sales_Dashboard_Data.xlsx
 
 Power BI Desktop · DAX · Power Query · Excel
 
-## Author
+## 👤 Author
 
-**Gowtham G**, aspiring Data Analyst
-LinkedIn · [GitHub](https://github.com/<your-username>)    make this professional and awesome
+**Gowtham G**
+Aspiring Data Analyst | SQL · Power BI · Python · Excel
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/your-linkedin-id)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/gowtham-g-2002)
+
+⭐ If you found this project useful, consider giving the repo a star.
