@@ -1,2 +1,75 @@
-# datanova-sales-dashboard
-Interactive Power BI sales dashboard analysing sales, profit and quantity by product, category, payment mode and sale type (2024-2025). Built with DAX and Power Query.
+# Sales Dashboard | Power BI
+
+An interactive Power BI dashboard that analyses sales, profit and quantity across
+products, categories, payment modes and sale types for **2024 – 2025**.
+
+## Headline numbers
+
+| Metric | Value |
+|---|---|
+| Total Sales (after discount) | 366.62K |
+| Quantity Sold | 4,280 units |
+| Profit | 34.1K |
+| Profit % | ~10% |
+| Transactions | 527 across 44 products |
+
+## What the dashboard shows
+
+**Slicers:** Year, Month, Sale Type, Payment Mode
+**Sales & Profit by Month:** monthly trend for both measures
+**Daily Sales:** day-of-month pattern
+**Sales by Payment Mode:** Online vs Cash
+**Sales by Sale Type:** Direct Sales, Online, Wholesaler
+**Sales by Product** and **Sales by Category** (treemap)
+## Key insights
+
+**Discounts roughly halve profit.** Gross margin before discounts is about 68.9K, but
+about 34.8K is given away in discounts, leaving 34.1K profit.
+**Direct Sales drive the business:** 51.7% of sales, followed by Online (33.5%) and
+Wholesaler (14.8%).
+**Cash and online payments are almost evenly split** (49.5% / 50.5%).
+**Top categories:** Personal Care (87.0K), Household (85.2K) and Beverages (83.6K).
+Furnishing is the smallest at 47.6K.
+## Data model
+
+Two tables joined on PRODUCT ID (many-to-one, InputData → MasterData).
+
+**InputData** (527 rows, transactions)
+
+| Column | Description |
+|---|---|
+| DATE | Transaction date (2024-01-01 to 2025-12-31) |
+| PRODUCT ID | Key to MasterData |
+| QUANTITY | Units sold |
+| SALE TYPE | Direct Sales / Online / Wholesaler |
+| PAYMENT MODE | Cash / Online |
+| DISCOUNT % | Discount applied to the line |
+
+**MasterData** (44 products, reference)
+
+| Column | Description |
+|---|---|
+| PRODUCT ID | Unique product key |
+| PRODUCT | Product name |
+| CATEGORY | Personal Care, Household, Beverages, Grocery, Furnishing |
+| UOM | Unit of measure |
+| BUYING PRIZE | Cost price per unit |
+| SELLING PRICE | List price per unit |
+
+Business logic: Sales = Quantity × Selling Price × (1 − Discount %) and
+Profit = Sales − Quantity × Buying Price. See [docs/dax_measures.md](docs/dax_measures.md).
+
+## How to use
+
+Clone the repo: git clone https://github.com/<your-username>/powerbi-sales-dashboard.git
+Open dashboard/Sales_Dashboard.pbix in Power BI Desktop
+If prompted, point the data source to data/Sales_Dashboard_Data.xlsx
+(Home → Transform data → Data source settings)
+## Tools
+
+Power BI Desktop · DAX · Power Query · Excel
+
+## Author
+
+**Gowtham G**, aspiring Data Analyst
+LinkedIn · [GitHub](https://github.com/<your-username>)    make this professional and awesome
